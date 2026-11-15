@@ -1,0 +1,16 @@
+# Do not commit credentials, VM disk images or installation ISOs
+*.iso
+*.qcow2
+*.vmdk
+*.vdi
+*.vhd
+*.vhdx
+*.pfx
+*.pem
+*.key
+*.kdbx
+.env
+.env.*
+!*.example
+.DS_Store
+Thumbs.db
