@@ -4,7 +4,7 @@
 
 - GitHub repository `MasterChief-010101/windows-it-helpdesk-lab` is public and contains the README and completed HD-001 and HD-002 written case studies.
 - Four HD-001 screenshot files have been committed to `evidence/`.
-- **HD-002 standard-user screenshot** is prepared but requires manual upload to `evidence/hd-002/01-standard-user-verification.png`.
+- **HD-002 standard-user screenshot** was uploaded to `evidence/hd-002/01-standard-user-verification.png`.
 
 ## Privacy checks before new evidence uploads
 
