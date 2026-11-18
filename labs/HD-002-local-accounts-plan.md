@@ -25,6 +25,6 @@ A new user needs access to a shared lab PC for routine work, but does **not** ne
 - The work was performed in a personal Windows VM, not on the Ubuntu host or Cortana service account.
 - No passwords, security answers, or privileged credentials were intentionally published.
 - The UAC credential prompt was reported but not captured in a screenshot.
-- The screenshot of the final standard-user session was reviewed; publication of the cropped screenshot is pending.
+- The screenshot of the final standard-user session was reviewed and a cropped copy was published in [HD-002 evidence](../evidence/hd-002/01-standard-user-verification.png).
 
 [Read the HD-002 support ticket](../tickets/HD-002-standard-user-and-uac.md)
