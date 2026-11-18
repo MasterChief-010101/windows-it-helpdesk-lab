@@ -10,9 +10,9 @@ The owner submitted screenshots showing:
 2. An initially misleading `whoami /groups` screenshot from an elevated administrator console (not evidence of the `LabUser` session).
 3. A correctly non-elevated `LabUser` console running `whoami` and `whoami /groups`, showing `BUILTIN\\Users`, no Administrators membership, and Medium Mandatory Level.
 
-**Planned image filename:** `01-standard-user-verification.png`
+**Published image:** [01-standard-user-verification.png](01-standard-user-verification.png)
 
-**Current image status:** Pending manual upload to this GitHub folder. The prepared image is a crop of the actual submitted screenshot, with the VM hostname obscured; the displayed account suffix (`labuser`), membership, and Medium integrity label remain visible. No command result was synthesized.
+**Image status:** Uploaded. The published image is a crop of the actual submitted screenshot, with the VM hostname obscured; the displayed account suffix (`labuser`), group membership, and Medium integrity label remain visible. No command result was synthesized.
 
 **Limitations:** The administrator credential prompt was reported by the owner but not captured; no protected-resource access tests were performed.
 
