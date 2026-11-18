@@ -58,7 +58,9 @@ The submitted screenshot showed:
 
 These observations support that the captured session was running as a **standard user**, not an elevated administrator.
 
-**Screenshot status:** The original verification image was supplied during the lab and reviewed. A cropped copy with the VM hostname obscured was prepared for publication; the image will appear in this repository after upload under `evidence/hd-002/01-standard-user-verification.png`.
+**Screenshot:** The original verification image was supplied during the lab and reviewed. A cropped copy with the VM hostname obscured was uploaded to this repository.
+
+![HD-002 standard-user verification](../evidence/hd-002/01-standard-user-verification.png)
 
 ## 4. User Account Control (UAC) test
 
