@@ -49,6 +49,6 @@ I built a Windows 11 Enterprise evaluation virtual machine on an Ubuntu laptop u
 
 ## Evidence and documentation
 
-Each completed ticket separates **observations**, **tests**, **actions taken**, **verified results**, and **remaining uncertainty**. The [evidence index](evidence/README.md) covers HD-001; the HD-002 account screenshot was captured and is awaiting upload to GitHub. HD-001 screenshots were cropped and a unique Windows device identifier was obscured before public packaging.
+Each completed ticket separates **observations**, **tests**, **actions taken**, **verified results**, and **remaining uncertainty**. The [evidence index](evidence/README.md) covers HD-001; the [HD-002 standard-user screenshot](evidence/hd-002/01-standard-user-verification.png) has also been uploaded and is indexed in [HD-002 evidence notes](evidence/hd-002/README.md). HD-001 screenshots were cropped and a unique Windows device identifier was obscured before public packaging.
 
 > **Safety:** Exercises were performed in a personally controlled VM. Commands that change settings are not intended for employer-managed systems without authorization. Passwords, recovery answers, and credentials are excluded from public documentation.
