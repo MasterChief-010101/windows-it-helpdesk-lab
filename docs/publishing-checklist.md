@@ -1,7 +1,15 @@
-# Publication checklist
+# Publishing and maintenance checklist
 
-1. Create GitHub repository `windows-it-helpdesk-lab` under `MasterChief-010101` using **Public** visibility and **Add a README file** so `main` is initialized.
-2. Do not upload your complete VM image, Windows ISO, credentials, network logs containing device identifiers, or the uncropped screenshots.
-3. Upload/commit the files in this package, preserving folder paths (or have ChatGPT publish via the connected GitHub tool after the repository exists).
-4. Check rendered links in `README.md`, ticket screenshot captions, and all four evidence images.
-5. Keep `HD-002` marked planned until the account-management work is performed and validated.
+## Current state
+
+- GitHub repository `MasterChief-010101/windows-it-helpdesk-lab` is public and contains the README and completed HD-001 and HD-002 written case studies.
+- Four HD-001 screenshot files have been committed to `evidence/`.
+- **HD-002 standard-user screenshot** is prepared but requires manual upload to `evidence/hd-002/01-standard-user-verification.png`.
+
+## Privacy checks before new evidence uploads
+
+- Do not commit VM disk images, installation ISOs, credentials, personal emails, keys, or recovery question answers.
+- Crop to the relevant terminal window; conceal unique device identifiers if not needed to demonstrate the result.
+- Avoid including personal browser tabs, cloud account pages, or unrelated desktop windows.
+- Preserve the actual text of commands and their output; note any crop/redaction in evidence descriptions.
+- Do not claim a planned exercise is completed until its results have been observed and verified.

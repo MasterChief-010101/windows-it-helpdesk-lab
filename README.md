@@ -29,16 +29,26 @@ I built a Windows 11 Enterprise evaluation virtual machine on an Ubuntu laptop u
 
 **Outcome:** **Resolved with workaround.** The cause of the router-side response remains **unconfirmed**; no change to router or Ubuntu DNS configuration was made.
 
-[Read the HD-001 support ticket](tickets/HD-001-dns-resolution.md) · [Review screenshots](evidence/README.md)
+[Read HD-001](tickets/HD-001-dns-resolution.md) · [HD-001 screenshots](evidence/README.md)
 
-## Planned exercises (not completed)
+### HD-002 — Local user accounts, UAC, and least privilege (November 18, 2026)
 
-- [HD-002 — Local user accounts, permissions, and least privilege](labs/HD-002-local-accounts-plan.md)
-- Windows Event Viewer diagnostics and support-ticket recording (future)
-- Windows update and services troubleshooting (future)
+**Scenario:** A new user needs access to a shared Windows lab computer but should not have administrator permissions.
 
-## Documentation approach
+**Action:** Created a local `LabUser` account and checked membership with `net user LabUser` and `net localgroup Administrators`.
 
-Each completed ticket separates **observations**, **tests**, **actions taken**, **verified result**, and **remaining uncertainty**. Screenshots were cropped to focus on relevant Windows Command Prompt output. One unique Windows device identifier was obscured before preparing the public portfolio image. See the [evidence notes](evidence/README.md).
+**Verification:** Signed in as `LabUser`, ran `whoami` and `whoami /groups` in a non-elevated Command Prompt, and confirmed `BUILTIN\\Users` membership with a Medium integrity level and no Administrators group. When `Run as administrator` was selected, Windows requested administrator credentials (reported by the lab operator).
 
-> **Safety:** Exercises are performed in a personally controlled VM. Commands that change settings are not intended for employer-managed systems without authorization.
+**Outcome:** **Completed — standard-user access and UAC behavior verified.** See the [HD-002 support ticket](tickets/HD-002-standard-user-and-uac.md) and the [original exercise plan](labs/HD-002-local-accounts-plan.md).
+
+## Planned exercises (not yet performed)
+
+- Windows Event Viewer diagnostics and support-ticket recording
+- Windows services and update troubleshooting
+- Further account and file-permission testing
+
+## Evidence and documentation
+
+Each completed ticket separates **observations**, **tests**, **actions taken**, **verified results**, and **remaining uncertainty**. The [evidence index](evidence/README.md) covers HD-001; the HD-002 account screenshot was captured and is awaiting upload to GitHub. HD-001 screenshots were cropped and a unique Windows device identifier was obscured before public packaging.
+
+> **Safety:** Exercises were performed in a personally controlled VM. Commands that change settings are not intended for employer-managed systems without authorization. Passwords, recovery answers, and credentials are excluded from public documentation.

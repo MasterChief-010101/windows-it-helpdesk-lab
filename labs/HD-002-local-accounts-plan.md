@@ -1,34 +1,30 @@
 # HD-002 — Windows local accounts and least-privilege testing
 
-**Status: PLANNED / NOT YET PERFORMED**
+**Status: COMPLETED 2026-11-18**
+
+This document preserves the original exercise plan. The executed steps, observations, corrections, and evidence limitations are documented in the [completed support ticket](../tickets/HD-002-standard-user-and-uac.md).
 
 ## Goal
 
-Demonstrate how a technician creates a local **standard** user, inspects local group membership, distinguishes standard and administrator permissions, and documents an authorization-safe troubleshooting ticket.
+Demonstrate local account creation, inspect local group membership, distinguish a standard session from an administrator session, and test how Windows handles a request for elevation.
 
-## Proposed scenario
+## Scenario
 
-A new user needs access to a shared lab PC for routine work, but does **not** need administrator privileges. Create an appropriate local account in the Windows 11 **VM only**, check its effective privileges, and record the evidence.
+A new user needs access to a shared lab PC for routine work, but does **not** need administrator privileges. The work was performed **only in the Windows 11 VM**.
 
-## Steps to perform (only after starting the exercise)
+## Planned steps and observed completion
 
-1. Open **Settings → Accounts → Other users** (menu labels may vary in Windows 11 Enterprise).
-2. Add a **local account** named `LabUser` with a unique password not included in screenshots or GitHub.
-3. Confirm the account type is **Standard user**, not Administrator.
-4. Open a Windows Command Prompt and record read-only checks:
-   ```cmd
-   net user LabUser
-   net localgroup Administrators
-   ```
-5. Sign in to `LabUser`, inspect `whoami` and `whoami /groups`, and confirm routine sign-in works.
-6. Observe an administrator-privilege prompt for a task requiring elevation **without entering credentials or changing settings unless needed for the lab**.
-7. Create a new support ticket that separates account creation, verification, UAC behavior, and any unresolved questions.
+1. Create a local `LabUser` account using Windows account settings — **completed**.
+2. Verify the account type using `net user LabUser` and `net localgroup Administrators` — **completed**.
+3. Sign in as `LabUser`, inspect `whoami` and `whoami /groups` in a **non-elevated** shell — **completed** after an initial administrator-shell mix-up.
+4. Request `Run as administrator` and observe Windows prompting for administrator credentials — **operator confirmed**.
+5. Record results and limitations in an IT support ticket — **completed**.
 
-## Safety and evidence
+## Safety and evidence notes
 
-- Run entirely in the personal Windows VM, not the Ubuntu host or Cortana service account.
-- Never share passwords, recovery questions, tokens, or unique machine IDs.
-- Do not run destructive commands or change privileged group membership for the new user.
-- Evidence should show local-account properties and group membership without sensitive identifiers.
+- The work was performed in a personal Windows VM, not on the Ubuntu host or Cortana service account.
+- No passwords, security answers, or privileged credentials were intentionally published.
+- The UAC credential prompt was reported but not captured in a screenshot.
+- The screenshot of the final standard-user session was reviewed; publication of the cropped screenshot is pending.
 
-**Completion criteria:** Screenshots or text logs showing the standard account exists, is not in the local Administrators group, and can sign in. This document is a plan, **not a claim that the exercise has been completed**.
+[Read the HD-002 support ticket](../tickets/HD-002-standard-user-and-uac.md)
