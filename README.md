@@ -19,6 +19,16 @@ I built a Windows 11 Enterprise evaluation virtual machine on an Ubuntu laptop u
 
 ## Completed case studies
 
+### HD-003 — Print Spooler service recovery and event-log investigation (November 21–22, 2026)
+
+**Scenario:** Deliberately stopped the Windows Print Spooler in a personal VM to practice troubleshooting a simulated printing interruption.
+
+**Investigation:** Verified the stopped service state, queried Service Control Manager and System event logs, and inspected PrintService Operational and Admin log settings. The targeted event query had no matches; the Operational log was disabled.
+
+**Action and verification:** Restarted the service and confirmed `Running` / `Automatic` with a `spoolsv` process present. The reported process start time preceded the latest interruption, so a newly spawned process was not established. No print job was tested.
+
+**Outcome:** **Service-status restoration verified; end-to-end printing not tested.** [Read HD-003](tickets/HD-003-print-spooler-service-and-event-logs.md).
+
 ### HD-004 — SPICE clipboard failure and signed VirtIO driver recovery (November 21–22, 2026)
 
 **Problem:** Host-to-guest clipboard sharing failed while working on another lab exercise. The SPICE guest service repeatedly stopped.
@@ -53,7 +63,6 @@ I built a Windows 11 Enterprise evaluation virtual machine on an Ubuntu laptop u
 
 ## In progress and planned exercises
 
-- HD-003 — controlled Print Spooler interruption and Event Viewer investigation (started; final restoration and verification not yet documented)
 - Further Windows services and update troubleshooting
 - Further account and file-permission testing
 
