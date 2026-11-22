@@ -19,6 +19,16 @@ I built a Windows 11 Enterprise evaluation virtual machine on an Ubuntu laptop u
 
 ## Completed case studies
 
+### HD-006 — PowerShell Windows system-health diagnostic automation (November 22, 2026)
+
+**Project:** Developed a Windows PowerShell 5.1 script to collect OS, uptime, memory, fixed-disk and Windows service status, and save a structured JSON diagnostic report.
+
+**Testing:** Ran it as a standard user, validated JSON structure, verified repeated execution with new timestamps, and confirmed a controlled output-path failure returned a nonzero process exit code.
+
+**Scope:** The published code is the tested version; known collection-phase error-handling and service-lookup limitations are documented. The raw system report is not published.
+
+**Outcome:** **Working lab script with documented tests.** [Source code, instructions and results](projects/HD-006-PowerShell-Diagnostics/README.md).
+
 ### HD-005 — NTFS file permissions and Access Denied (November 22, 2026)
 
 **Scenario:** A standard Windows user could read a test document but was intentionally prevented from modifying it.
