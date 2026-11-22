@@ -19,6 +19,16 @@ I built a Windows 11 Enterprise evaluation virtual machine on an Ubuntu laptop u
 
 ## Completed case studies
 
+### HD-004 — SPICE clipboard failure and signed VirtIO driver recovery (November 21–22, 2026)
+
+**Problem:** Host-to-guest clipboard sharing failed while working on another lab exercise. The SPICE guest service repeatedly stopped.
+
+**Investigation:** Correlated PowerShell service and process checks, Windows event logs, SPICE application logs, and Device Manager. Identified an inaccessible SPICE serial channel and Code 52 on the 2017 VirtIO Serial Driver.
+
+**Action and verification:** Mounted an official VirtIO driver ISO from libvirt storage and installed the compatible signed Windows 11 serial driver. Verified device health (CM_PROB_NONE), agent processes, automatic service startup, and successful clipboard use after a reported reboot. No signature-enforcement bypass was performed.
+
+**Outcome:** **Resolved.** [Read HD-004](tickets/HD-004-spice-clipboard-driver-recovery.md) — genuine lab incident, with diagnostic excerpts and before/after driver details.
+
 ### HD-001 — Domain-specific DNS resolution failure (November 15, 2026)
 
 **Problem:** In the Windows VM, an external IP address was reachable, but `example.com` returned a DNS *Non-existent domain* response through the default DNS service.
@@ -41,10 +51,10 @@ I built a Windows 11 Enterprise evaluation virtual machine on an Ubuntu laptop u
 
 **Outcome:** **Completed — standard-user access and UAC behavior verified.** See the [HD-002 support ticket](tickets/HD-002-standard-user-and-uac.md) and the [original exercise plan](labs/HD-002-local-accounts-plan.md).
 
-## Planned exercises (not yet performed)
+## In progress and planned exercises
 
-- Windows Event Viewer diagnostics and support-ticket recording
-- Windows services and update troubleshooting
+- HD-003 — controlled Print Spooler interruption and Event Viewer investigation (started; final restoration and verification not yet documented)
+- Further Windows services and update troubleshooting
 - Further account and file-permission testing
 
 ## Evidence and documentation
