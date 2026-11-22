@@ -19,6 +19,16 @@ I built a Windows 11 Enterprise evaluation virtual machine on an Ubuntu laptop u
 
 ## Completed case studies
 
+### HD-005 — NTFS file permissions and Access Denied (November 22, 2026)
+
+**Scenario:** A standard Windows user could read a test document but was intentionally prevented from modifying it.
+
+**Investigation:** Verified NTFS, local account membership, inherited ACLs and file permissions. Disabled inheritance on a dedicated lab subfolder, preserved appropriate Read & Execute access, and reproduced an `UnauthorizedAccessException` when `LabUser` attempted to append text.
+
+**Action and verification:** Confirmed a file-specific `LabUser:(W)` access entry, then successfully appended text as the same standard-user account. Existing Administrators and SYSTEM Full Control entries remained in the verified file ACL.
+
+**Outcome:** **Passed — targeted file edit verified.** This was a controlled home-lab exercise, not a real workplace incident. [Read HD-005](tickets/HD-005-ntfs-permissions-and-access-denied.md).
+
 ### HD-003 — Print Spooler service recovery and event-log investigation (November 21–22, 2026)
 
 **Scenario:** Deliberately stopped the Windows Print Spooler in a personal VM to practice troubleshooting a simulated printing interruption.
@@ -64,7 +74,7 @@ I built a Windows 11 Enterprise evaluation virtual machine on an Ubuntu laptop u
 ## In progress and planned exercises
 
 - Further Windows services and update troubleshooting
-- Further account and file-permission testing
+- Additional NTFS permissions testing, including delete and effective-access scenarios
 
 ## Evidence and documentation
 
